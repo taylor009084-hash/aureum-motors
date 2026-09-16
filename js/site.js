@@ -4,10 +4,10 @@
    ========================================================================== */
 const SITE_CONFIG = {
   brand: "Aureum Motors",
-  whatsappNumber: "923001234567", // country code + number, no + or spaces
-  phone: "+92 300 1234567",
-  email: "sales@aureummotors.com",
-  address: "Cantt Bazaar Road, Multan, Punjab, Pakistan"
+  whatsappNumber: "923260420624", // country code + number, no + or spaces
+  phone: "+92 326 0420624",
+  email: "taylor009084@gmail.com",
+  address: "Civil Lines, Jauharabad, Punjab, Pakistan"
 };
 
 /* Builds a wa.me link with an optional prefilled message */
