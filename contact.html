@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us — Aureum Motors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <div class="container contact-grid">
+
+    <div class="contact-panel">
+      <h2>Talk to Us</h2>
+      <p>The fastest way to reach us is WhatsApp — ask about a specific car, request more photos, or arrange a viewing.</p>
+
+      <div class="whatsapp-card">
+        <div class="whatsapp-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.3A8.7 8.7 0 0 0 4.7 17.2L4 21l3.9-.7a8.7 8.7 0 0 0 12.5-9.6 8.6 8.6 0 0 0-2.8-4.4Z" stroke="#0a0a0b" stroke-width="1.4"/><path d="M9 9.6c0 3.4 2.9 6.3 6.3 6.3.5 0 .9-.6.7-1L15 13.7c-.2-.4-.7-.5-1-.3l-.7.4c-.9-.5-1.6-1.2-2.1-2.1l.4-.7c.2-.3.1-.8-.3-1L10.1 9c-.4-.2-1 .2-1 .7Z" fill="#0a0a0b"/></svg>
+        </div>
+        <p><strong>Chat on WhatsApp</strong>Usually replies within the hour.</p>
+      </div>
+
+      <a href="#" id="whatsappCta" class="btn btn-gold btn-block" target="_blank" rel="noopener">Message Us on WhatsApp</a>
+
+      <ul class="contact-detail-list">
+        <li><span>Phone</span><strong id="phoneText"></strong></li>
+        <li><span>Email</span><strong id="emailText"></strong></li>
+        <li><span>Showroom</span><strong id="addressText"></strong></li>
+        <li><span>Hours</span><strong>Mon – Sat, 11am – 8pm</strong></li>
+      </ul>
+    </div>
+
+    <div class="contact-panel">
+      <h2>Send an Inquiry</h2>
+      <p>Prefer email? Fill this in and we'll get back to you — or copy it straight into WhatsApp with the button below.</p>
+
+      <form id="contactForm">
+        <div class="form-field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your name" required />
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+92 3XX XXXXXXX" required />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="I'm interested in..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline btn-block">Continue on WhatsApp</button>
+        <p class="form-note">Submitting opens WhatsApp with your details pre-filled — nothing is sent until you press send there.</p>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/cars-data.js"></script>
+<script src="js/site.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initHeaderFooter("contact");
+
+    document.getElementById("phoneText").textContent = SITE_CONFIG.phone;
+    document.getElementById("emailText").textContent = SITE_CONFIG.email;
+    document.getElementById("addressText").textContent = SITE_CONFIG.address;
+
+    // If arriving from a car's detail page (?car=id), prefill the inquiry with that car's name
+    const params = new URLSearchParams(window.location.search);
+    const carId = params.get("car");
+    const car = typeof CARS !== "undefined" ? CARS.find((c) => c.id === carId) : null;
+    const defaultMessage = car
+      ? `Hello, I'm interested in the ${car.year} ${car.name} (${car.trim}) listed at ${car.price}.`
+      : "Hello, I'd like to know more about your cars.";
+
+    document.getElementById("whatsappCta").href = buildWhatsAppLink(defaultMessage);
+    if (car) document.getElementById("message").value = defaultMessage;
+
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim() || defaultMessage;
+      const full = `Name: ${name}\nPhone: ${phone}\n\n${message}`;
+      window.open(buildWhatsAppLink(full), "_blank");
+    });
+  });
+</script>
+</body>
+</html>
