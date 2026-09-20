@@ -19,22 +19,22 @@
 
 const CARS = [
   {
-    id: "bentley-continental-gt",
-    name: "Bentley Continental GT",
-    year: 2023,
-    trim: "Speed W12",
-    price: "$261,000",
-    tagline: "Handcrafted grand touring, built for effortless speed.",
+    id: "toyota-prius",
+    name: "Toyota Prius",
+    year: 2013,
+    trim: "-",
+    price: "Rs. 4,500,000",
+    tagline: "-",
     thumbnail:
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/814368852_122098645491483284_6168450184449682619_n.jpg?stp=dst-jpg_tt6&cstp=mx1195x896&ctp=s1195x896&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ByQheufxgf0Q7kNvwF7CCeV&_nc_oc=AdqTbQzTV-AgrdDHVXlmp2GiUXjof2sYClg2iWcQM4wxXb7pSmrj-j0JsxHzWP0-NRs&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=9JRoY2yJfjK49tffbHQ6Iw&_nc_ss=7b2a8&oh=00_AQKpnDjYz_4Dbjq5ySm_a-6tfspyAB6OBtT4e1utDYSKBA&oe=6AB5353B",
     gallery: [
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1541348263662-e068662d82af?auto=format&fit=crop&w=1600&q=80"
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/814368852_122098645491483284_6168450184449682619_n.jpg?stp=dst-jpg_tt6&cstp=mx1195x896&ctp=s1195x896&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ByQheufxgf0Q7kNvwF7CCeV&_nc_oc=AdqTbQzTV-AgrdDHVXlmp2GiUXjof2sYClg2iWcQM4wxXb7pSmrj-j0JsxHzWP0-NRs&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=9JRoY2yJfjK49tffbHQ6Iw&_nc_ss=7b2a8&oh=00_AQKpnDjYz_4Dbjq5ySm_a-6tfspyAB6OBtT4e1utDYSKBA&oe=6AB5353B",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/789506800_122098645635483284_7533154923542041586_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=n5MeCRix-ckQ7kNvwGNTb09&_nc_oc=Adp4GcHXhkQlD04E0L_XVk8ZzKU8GWnLVmlLGayevMlv172dhQyejKN26ov-FDw2DpY&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=jSS1PGAAU6dptVDhp-Hf8Q&_nc_ss=7b2a8&oh=00_AQJevDERLo5al8TdPQMT9vUW5v2nmuqJFsoE4ghyZd9Bqg&oe=6AB52626",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/797653422_122098645449483284_3480587030603770202_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1080&ctp=s1920x1080&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xdkldKYmWz8Q7kNvwGMY57r&_nc_oc=AdpUlDYqbe_dDz41Cbh1DMfgEn38-8C30ieTc2LMJO6gNzG3B8prQXXbb8XNTRwgB5I&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=L37gW1RFVxjg32gxhtQoVg&_nc_ss=7b2a8&oh=00_AQIGXIVfueZHL5Rj5HjEaYByW51XNiuId8Mv8FVHx0zOfA&oe=6AB53899",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/813833064_122098645599483284_1740883663568765842_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1080&ctp=s1920x1080&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IR9cDTgu8fAQ7kNvwGY7sMQ&_nc_oc=AdqmGXeoJWDtePAMPIe2_ysocq2_pHVtAfgtbhF-5svOocVejSJWvf1HIPV2JKgU5HI&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=PaUkPcZTqhwh0WbJo4e6ow&_nc_ss=7b2a8&oh=00_AQJ9_A2FMI6rJX2xjgpY8VbR7FxV4FlREJVxc_VZeSZC7A&oe=6AB5215B"
     ],
     description:
-      "Finished in Beluga Black over Newmarket Tan hand-stitched leather, this Continental GT Speed pairs a 6.0L twin-turbo W12 with Bentley's rotating display and diamond-quilted interior. One owner, full service history, delivered from new by an authorised dealer.",
+      "TBD",
     specs: {
       "Engine": "6.0L Twin-Turbo W12",
       "Power": "650 hp",
@@ -49,22 +49,22 @@ const CARS = [
     }
   },
   {
-    id: "porsche-911-turbo-s",
-    name: "Porsche 911 Turbo S",
-    year: 2022,
-    trim: "992 Coupe",
-    price: "$228,500",
-    tagline: "The benchmark sports car, uncompromised.",
+    id: "toyota-passo",
+    name: "Toyota Passo",
+    year: 2015,
+    trim: "-",
+    price: "Rs. 3,400,000",
+    tagline: "-",
     thumbnail:
-      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/814342721_122098627641483284_4483538792262491504_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x720&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WOivNkSDbigQ7kNvwFvtftY&_nc_oc=Adrcgg3cXX7j5cXqfU-2GwIQxbiF28zDQnexcuOnbNkGZfegaGQb4UGAm2PKsLXEles&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=IynVCNQgzPjS4Nj-PMR5fw&_nc_ss=7b2a8&oh=00_AQJnjl4cZRQAilrEgI70zaTmNiR5u6FH7TOI1yjGLUrJEg&oe=6AB53D52https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/814342721_122098627641483284_4483538792262491504_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x720&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WOivNkSDbigQ7kNvwFvtftY&_nc_oc=Adrcgg3cXX7j5cXqfU-2GwIQxbiF28zDQnexcuOnbNkGZfegaGQb4UGAm2PKsLXEles&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=IynVCNQgzPjS4Nj-PMR5fw&_nc_ss=7b2a8&oh=00_AQJnjl4cZRQAilrEgI70zaTmNiR5u6FH7TOI1yjGLUrJEg&oe=6AB53D52",
     gallery: [
-      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1592853625597-7d17d0fcc7ea?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1600&q=80"
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/814342721_122098627641483284_4483538792262491504_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x720&ctp=s590x590&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WOivNkSDbigQ7kNvwFvtftY&_nc_oc=Adrcgg3cXX7j5cXqfU-2GwIQxbiF28zDQnexcuOnbNkGZfegaGQb4UGAm2PKsLXEles&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=IynVCNQgzPjS4Nj-PMR5fw&_nc_ss=7b2a8&oh=00_AQJnjl4cZRQAilrEgI70zaTmNiR5u6FH7TOI1yjGLUrJEg&oe=6AB53D52",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/813872734_122098627713483284_5773400581748045714_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DQD_evIBAxgQ7kNvwETbYC3&_nc_oc=AdoxmHRdtQB9tpzXYXA0-cd9Z1WrLIIM6YOb7kxbYFTcb20LhQR3GpeMMBA3Q3aK1wk&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=pFAmwiHt8TTPD1mN8yYLOA&_nc_ss=7b2a8&oh=00_AQKO7g6ciUvXHcrq_K9IpO1pn_DLLmZg49UFHEkSEEGQWQ&oe=6AB524A5",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/814340614_122098627857483284_1188528901402802128_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1440&ctp=s1920x1440&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pFSrqxdgnG4Q7kNvwFQ8jvW&_nc_oc=AdovESirpU6tYoYgQmM-duletxZMseVyV4AzJ4pNijvIl09eTMEXdp4h3pG1LM2FjDs&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=AZRWMpfmMPJrzfdz8OBAyw&_nc_ss=7b2a8&oh=00_AQKTwzCD-w8QaE4-W64n2COErWpa2B5qNhcSRn0v905MJQ&oe=6AB53DDB",
+      "https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/814691916_122098628025483284_953868558677508940_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t6-LOpLoyOUQ7kNvwEKFOxI&_nc_oc=Adrj9QlIuxEupdQbAGlCcEBz2pvg9JGBxpye2nU3J1ZfeOWRhGYrKZbHbGHUct4tdqU&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=ziQP84_yfNTmmNrH6B99fg&_nc_ss=7b2a8&oh=00_AQIHPIekeCi878ExnIM45GGCxfxuXUwnRgnie6__-vIE4A&oe=6AB51F54"
     ],
     description:
-      "GT Silver Metallic over black leather with GT Silver stitching. Optioned with carbon-ceramic brakes, lightweight sport package, and front-axle lift. Track-tested and dealer-maintained, this 911 Turbo S delivers supercar performance with daily-driver composure.",
+      "TBD",
     specs: {
       "Engine": "3.8L Twin-Turbo Flat-6",
       "Power": "640 hp",
